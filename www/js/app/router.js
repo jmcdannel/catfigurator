@@ -1,28 +1,36 @@
 define([
   'backbone',
-  'modules/HelloWorld',
-  'modules/Nav',
-  'modules/Footer'
-], function(Backbone, HelloWorld, Nav, Footer){
+  'lodash',
+  'modules/Catfigurator',
+  'modules/Title',
+  'modules/BoatPreview',
+  'modules/ColorControls',
+  'modules/UserActions',
+  'utils/DataLoader'
+], function(Backbone, _, Catfigurator, Title, BoatPreview, ColorControls, UserActions, DataLoader){
 
   var Router = Backbone.Router.extend({
 
     routes: {
-      ":language": "hello",
-      "": "hello"
+      '': 'default',
+      ':colors': 'default'
     },
 
     initialize: function() {
-      Nav.init();
-      var promise = Footer.init();
-      promise.done(function() {
-        app.log('footer is rendered');
-      });
+      
     },
 
-    hello: function(language) {
-      app.log('router:hello', language);
-      HelloWorld.init(language);
+    default: function(colors) {
+      app.log('router:default');
+
+      DataLoader.fetch(colors, function(boatConfig) {
+        app.log('fetched', boatConfig);
+        Catfigurator.init();
+        Title.init();
+        UserActions.init();
+        ColorControls.init(boatConfig);
+        BoatPreview.init(boatConfig);
+      });      
     }
 
   });

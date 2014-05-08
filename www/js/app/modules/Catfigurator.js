@@ -1,14 +1,11 @@
 define([
-  'models/HelloWorld',
-  'views/HelloWorld'
+  'models/Catfigurator',
+  'views/Catfigurator'
 ], function(_model, _view) {
 
-  function init(language) {
-    
+  function init() {
     var model = new _model();
-    if (language) {
-      model.set('language', language);
-    }
+    
     var view = new _view({
       model: model
     });

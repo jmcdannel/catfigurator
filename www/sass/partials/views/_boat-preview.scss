@@ -1,0 +1,17 @@
+$previewWidth: 628px;
+$previewHeight: 151px;
+
+#preview {
+
+  width: $previewWidth;
+  height: $previewHeight;
+  position: relative;
+  margin: 50px auto;
+
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+}

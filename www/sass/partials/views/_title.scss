@@ -1,0 +1,12 @@
+hgroup {
+  overflow: auto;
+  h1 { 
+    float: left; 
+    color: $darkGrey; 
+    small {
+      font-size: 12px;
+    }
+  }
+  h2 { float: right; }
+  border-bottom: 1px solid $darkGrey;
+}

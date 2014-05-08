@@ -2,9 +2,9 @@ define(['backbone'], function(Backbone) {
   
   return Backbone.View.extend({
 
-    el: '#page-footer',
+    el: '#catfigurator',
 
-    template: app.templates.footer,
+    template: app.templates['Catfigurator'],
 
     render: function() {
 

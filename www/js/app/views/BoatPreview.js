@@ -2,13 +2,9 @@ define(['backbone'], function(Backbone) {
   
   return Backbone.View.extend({
 
-    el: '#page-header',
+    el: '#preview',
 
-    template: app.templates.nav,
-
-    initialize: function() {
-      this.model.on('change', this.render, this);
-    },
+    template: app.templates['BoatPreview'],
 
     render: function() {
 

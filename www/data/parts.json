@@ -1,0 +1,7 @@
+[
+  { "name" : "Outside Panel", "id" : "outside-panel", "colors" : "panels", "image" : "outside" },
+  { "name" : "Bottom Panel", "id" : "bottom-panel", "colors" : "panels", "image" : "bottom" },
+  { "name" : "End Cones", "id" : "end-cones", "colors" : "panels", "image" : "cones" },
+  { "name" : "D-Rings", "id" : "d-rings", "colors" : "panels", "image" : "drings" },
+  { "name" : "Seam Tape", "id" : "seams", "colors" : "seams", "image" : "seams" }
+]

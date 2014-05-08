@@ -276,37 +276,61 @@ header {
 footer {
   min-height: 100px; }
 
-header {
-  background: #024959;
-  border-bottom: 1px solid #037e8c;
-  min-height: 40px; }
+hgroup {
+  overflow: auto;
+  border-bottom: 1px solid #404040; }
+  hgroup h1 {
+    float: left;
+    color: #404040; }
+    hgroup h1 small {
+      font-size: 12px; }
+  hgroup h2 {
+    float: right; }
 
-header a {
-  color: #f2efdc;
-  display: inline-block;
-  padding: 0 10px;
-  line-height: 40px;
-  font-size: 13px;
-  font-weight: bold; }
+#preview {
+  width: 628px;
+  height: 151px;
+  position: relative;
+  margin: 50px auto; }
+  #preview > img {
+    position: absolute;
+    top: 0;
+    left: 0; }
 
-header a:hover {
-  text-decoration: none;
-  color: #f24c27; }
-
-header nav:after {
-  content: '';
+#color-controls fieldset {
   display: block;
-  clear: both; }
-
-footer {
-  border-top: 1px solid #f24c27; }
-
-.tech-list {
-  overflow: auto; }
-
-.tech-list li {
-  display: block;
+  overflow: auto;
+  width: 50%;
   float: left;
-  padding: 5px 20px 5px 0;
-  list-style: none;
-  font-size: 12px; }
+  padding: 0;
+  margin: 0;
+  position: relative; }
+#color-controls fieldset:after {
+  clear: both;
+  content: '';
+  display: block; }
+#color-controls h3 {
+  font-size: 12px;
+  margin-bottom: 4px; }
+#color-controls label {
+  display: block;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  margin: 1px;
+  float: left;
+  border: 1px solid #999;
+  position: relative; }
+  #color-controls label span {
+    display: none; }
+#color-controls input {
+  position: absolute;
+  left: -10000em;
+  top: -10000em; }
+#color-controls input:checked + label {
+  background-image: url(../images/selected_swatch.png);
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+#actions {
+  clear: both; }

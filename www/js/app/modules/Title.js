@@ -1,11 +1,13 @@
 define([
-  'models/Nav',
-  'views/Nav'
+  'models/Title',
+  'views/Title'
 ], function(_model, _view) {
 
-  function init(language) {
+  function init() {
+    app.log(_model, _view);
     
     var model = new _model();
+    
     var view = new _view({
       model: model
     });
