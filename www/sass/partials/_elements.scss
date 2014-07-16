@@ -1,33 +1,27 @@
 body {
   background: #FFF;
-  color: $darkGrey;
-}
-h1 {
-  color: $red;
+  color: $black;
 }
 a { 
-  color: $red;
+  color: $secondary;
   text-decoration: none;
   transition: color 0.1s ease-in;
   -webkit-transition: color 0.1s ease-in 0;
 }
 a:hover {
   text-decoration: underline;
+  color: $secondaryHover;
 }
-button {
+button.primary {
   position: relative;
   display: inline-block;
-  padding: 7px 12px;
+  padding: 7px 30px;
   font-size: 13px;
   font-weight: bold;
-  color: $darkGrey;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+  color: $black;
   white-space: nowrap;
-  background-color: $lightBlue;
-  @include gradient(lighten($cream, 20%), $cream);
-  background-repeat: repeat-x;
-  border-radius: 3px;
-  border: 1px solid #d5d5d5;
+  background-color: transparent;
+  border: 1px solid $primary;
   vertical-align: middle;
   cursor: pointer;
   -webkit-touch-callout: none;
@@ -37,9 +31,12 @@ button {
   -ms-user-select: none;
   user-select: none;
   -webkit-appearance: none;
-  transition: color 0.1s ease-in;
-  -webkit-transition: color 0.1s ease-in 0;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in 0;
 }
-button:hover {
-  color: $red;
+button.primary:hover {
+  background: $primaryHover;
+}
+button:focus { 
+    outline: none; 
 }

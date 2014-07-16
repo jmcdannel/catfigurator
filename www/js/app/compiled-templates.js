@@ -23,9 +23,10 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<!-- layer PNGs -->\n";
+  buffer += "<!-- layer PNGs -->\n<figure>\n";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.parts), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n<img id=\"preview-overlay\" src=\"images/boats/overlay.png\" alt=\"\">\n</figure>";
   return buffer;
   });
 
@@ -35,7 +36,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<hgroup id=\"app-title\"></hgroup>\n<figure id=\"preview\"></figure>\n<section id=\"color-controls\"></section>\n<section id=\"actions\"></section>";
+  return "<header id=\"app-title\"></header>\n<section id=\"preview\" class=\"container\"></section>\n<section id=\"color-controls\" class=\"container\"></section>\n<section id=\"actions\" class=\"container\"></section>";
   });
 
 this["app"]["templates"]["ColorControls"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -112,7 +113,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<h1>Cat-figurator <small>BETA</small></h1>\n<h2>12.5' Sotar Legend</h2>";
+  return "<hgroup class=\"container\">\n  <h1>Cat-figurator <small>BETA</small></h1>\n  <h2>12.5' Sotar Legend</h2>\n</hgroup>";
   });
 
 this["app"]["templates"]["UserActions"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -121,5 +122,5 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<button id=\"btn-save\">Save</button>";
+  return "\n<aside class=\"save-link action-window\" id=\"save-link\">\n  <input type=\"text\" class=\"input-save-link\" value=\"\" readonly>\n  <p>\n    Copy this link to come back to your design later.\n    <a href=\"#\" id=\"close-save-link\">Close</a>\n  </p>\n</aside>\n\n<div class=\"action-buttons\">\n\n  <button id=\"btn-save\" class=\"primary\" data-target=\"save-link\">Save</button>\n\n</div>";
   });

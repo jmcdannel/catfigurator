@@ -1,17 +1,25 @@
-$previewWidth: 628px;
-$previewHeight: 151px;
+$previewWidth: 960px;
+$previewHeight: 204px;
 
 #preview {
 
-  width: $previewWidth;
-  height: $previewHeight;
-  position: relative;
-  margin: 50px auto;
+  padding: 40px 0;
+  border: 1px solid $lightGrey;
+  margin: 20px auto;
+  border-radius: 5px;
 
-  > img {
-    position: absolute;
-    top: 0;
-    left: 0;
+  figure {
+    width: $previewWidth;
+    height: $previewHeight;
+    position: relative;
+    margin: 0 auto;
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
+
+
 
 }

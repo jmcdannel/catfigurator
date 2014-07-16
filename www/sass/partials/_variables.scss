@@ -1,6 +1,16 @@
 //https://kuler.adobe.com/Adobe-Ideas-Theme-color-theme-3630806/
 $darkGrey: #404040;
+$lightGrey: #CCC;
 $darkBlue: #024959;
 $lightBlue: #037E8C;
 $cream: #F2EFDC;
 $red: #F24C27;
+
+$primary: #006496;
+$primaryHover: #00B0D2;
+
+$secondary: #96C34B;
+$secondaryHover: lighten($secondary, 20%);
+
+$white: #E6F7F9;
+$black: #333333;

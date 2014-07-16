@@ -1,6 +1,14 @@
-$colorSize: 30px;
+$colorSize: 32px;
 
 #color-controls {
+
+  background: $black;
+  border-radius: 5px;
+
+  form {
+    padding: 0 20px 20px 20px;
+    overflow: auto;
+  }
 
   fieldset {
     display: block;
@@ -21,6 +29,10 @@ $colorSize: 30px;
   h3 {
     font-size: 12px;
     margin-bottom: 4px;
+    color: $white;
+    em {
+      color: $secondary;
+    }
   }
 
   label {
@@ -30,8 +42,15 @@ $colorSize: 30px;
     height: $colorSize;
     margin: 1px;
     float: left;
-    border: 1px solid #999;
+    cursor: pointer;
     position: relative;
+    @include box-shadow($black 0 0 5px);
+    z-index: 1;
+
+    &:hover {
+      @include box-shadow($lightGrey 0 0 5px);
+      z-index: 2;
+    }
 
     span { display: none; }
   }

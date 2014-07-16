@@ -20,6 +20,23 @@ module.exports = function(grunt) {
       }
     },
 
+    express: {
+        all: {
+            options: {
+                bases: ['./www/'],
+                port: 8080,
+                hostname: '0.0.0.0',
+                livereload: true
+            }
+        }
+    },
+
+    open: {
+      all: {
+        path: 'http://localhost:8080/index.dev.html'
+      }
+    },
+
     requirejs: {
       compile: {
         options: {
@@ -49,11 +66,17 @@ module.exports = function(grunt) {
     watch: {
       css: {
           files: ['www/sass/**/*.scss'],
-          tasks: ['sass']
+          tasks: ['sass'],
+          options: {
+            livereload: true,
+          }
       },
       html: {
         files: ['www/templates/*.hbs'],
-        tasks: ['handlebars']
+        tasks: ['handlebars'],
+        options: {
+          livereload: true,
+        }
       }
     }
 
@@ -65,7 +88,7 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', ['build']);
-  grunt.registerTask('dev', ['handlebars', 'sass']);
+  grunt.registerTask('dev', ['handlebars', 'sass', 'express', 'open', 'watch']);
   grunt.registerTask('build', ['handlebars', 'sass', 'cssmin', 'requirejs']);
 
 };

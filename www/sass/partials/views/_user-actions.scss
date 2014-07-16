@@ -1,3 +1,60 @@
 #actions {
   clear: both;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.action-window {
+  height: 0px;
+  max-height: 0px;
+  overflow: hidden;
+  background-color: #dedede;
+  -moz-transition: max-height 1s ease;
+  -webkit-transition: max-height 1s ease;
+  -o-transition: max-height 1s ease;
+  transition: max-height 1s ease;
+
+  &.open {
+    border: 1px solid $primaryHover;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: -1px;
+    background: $primaryHover;
+    height: auto;  
+    max-height: 200px;
+  }
+
+  &.loading p {
+    visibility: hidden;
+  }
+
+  a { 
+    color: $white;
+    &:hover { 
+      color: $white; 
+    }
+  }
+}
+
+.input-save-link {
+  border: 0;
+  height: 27px;
+  width: 400px;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+  -webkit-box-shadow: inset 0px 0px 5px 1px rgba(133,133,133,1);
+  -moz-box-shadow: inset 0px 0px 5px 1px rgba(133,133,133,1);
+  box-shadow: inset 0px 0px 5px 1px rgba(133,133,133,1);
+}
+.loading .input-save-link {
+  background-image: url(../images/ajax-loader.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+.action-buttons .open {
+  border-top: 1px solid $primaryHover;
+  background: $primaryHover;
 }

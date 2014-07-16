@@ -12,8 +12,7 @@ define(['lodash', 'utils/ColorUtils'], function(_, ColorUtils) {
         $.get(partUrl)
       ).then(
         function(colorResponse, partResponse) {
-          console.log(typeof ColorUtils.parseUrlColors);
-          parse(colorResponse, partResponse, [ColorUtils.parseUrlColors(colors)], colors, success);
+          parse(colorResponse, partResponse, [ColorUtils.parseUrlColors(colors)], success);
         }
       );
     } else {
@@ -23,13 +22,13 @@ define(['lodash', 'utils/ColorUtils'], function(_, ColorUtils) {
         $.get(defaultConfig)
       ).then(
         function(colorResponse, partResponse, configResponse) {
-          parse(colorResponse, partResponse, configResponse, colors, success);
+          parse(colorResponse, partResponse, configResponse, success);
         }
       );
     }
   }
 
-  function parse(colorResponse, partResponse, configResponse, colors, success) {
+  function parse(colorResponse, partResponse, configResponse, success) {
     var parts = partResponse[0];
     _.each(parts, function(part) {
       part.colorList = colorResponse[0][part.colors];
