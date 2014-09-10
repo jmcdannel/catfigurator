@@ -1,14 +1,20 @@
 <form>
   {{#each parts}}
-    <fieldset>
-      <h3>{{name}}: <em>{{getColor selected.color colorList}}</em></h3>
-      {{#each colorList}}
-      <input type="radio" name="{{../id}}" id="{{../id}}-{{name}}" value="{{name}}" 
-          {{#compare name 'eq' ../selected.color}}checked{{/compare}}>
-      <label style="background-color: #{{rgb}}" for="{{../id}}-{{name}}">
-        <span>{{description}}</span>
-      </label>
-      {{/each}}
+    <fieldset class="part-{{id}}">
+      <h3>{{name}}</h3>
+      <span class="selected-color" style="background-color: #{{selected.rgb}}">
+        {{getColor selected.name colorList}}
+      </span>
+
+      <div class="color-options">
+        {{#each colorList}}
+        <input type="radio" name="{{../id}}" id="{{../id}}-{{name}}" value="{{name}}"
+            {{#compare name 'eq' ../selected.name}}checked{{/compare}}>
+        <label style="background-color: #{{rgb}}" for="{{../id}}-{{name}}">
+          <span>{{description}}</span>
+        </label>
+        {{/each}}
+      </div>
     </fieldset>
   {{/each}}
 </form>

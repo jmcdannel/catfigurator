@@ -2,22 +2,24 @@ $colorSize: 32px;
 
 #color-controls {
 
-  background: $black;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 
   form {
-    padding: 0 20px 20px 20px;
-    overflow: auto;
+    padding: 15px;
+    display: flex;
+    flex: 1;
   }
 
   fieldset {
     display: block;
-    overflow: auto;
-    width: 50%;
-    float: left;
-    padding: 0;
-    margin: 0;
+    margin: 5px;
     position: relative;
+    border-radius: 3px;
+    padding: 0;
+    flex: 1;
+    border: 1px solid #999;
   }
 
   fieldset:after {
@@ -28,24 +30,66 @@ $colorSize: 32px;
 
   h3 {
     font-size: 12px;
-    margin-bottom: 4px;
+    margin: 0;
+    padding: 0 0 0 10px;
+    line-height: 40px;
     color: $white;
-    em {
-      color: $secondary;
+    float: left;
+    width: 60%;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .selected-color {
+    color: $white;
+    float: right;
+    line-height: 40px;
+    text-align: center;
+    display: block;
+    border-radius-right: 3px;
+    font-size: 12px;
+    font-style: normal;
+    cursor: pointer;
+    width: 40%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .color-options {
+    display: none;
+
+  }
+
+  fieldset.active {
+    border-radius: 3px 3px 0 0;
+    border-width: 1px 1px 0 1px;
+    background: $black;
+    z-index: 2;
+    .color-options {
+      padding: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      position: absolute;
+      top: 40px;
+      right: -1px;
+      left: -1px;
+      background: $black;
+
+      border: 1px solid #999;
+        border-radius: 0 0 3px 3px;
+        border-width:  0 1px 1px 1px;
+        margin-bottom: 20px;
     }
   }
 
   label {
-    display: block;
-    overflow: hidden;
-    width: $colorSize;
-    height: $colorSize;
-    margin: 1px;
-    float: left;
+    margin: 2%;
     cursor: pointer;
     position: relative;
-    @include box-shadow($black 0 0 5px);
     z-index: 1;
+    width: 21%;
+    height: 32px;
 
     &:hover {
       @include box-shadow($lightGrey 0 0 5px);
@@ -66,5 +110,11 @@ $colorSize: 32px;
     background-repeat: no-repeat;
     background-position: center center;
   }
+
+  .part-outside-panel,
+  .part-bottom-panel {
+
+  }
+
 
 }

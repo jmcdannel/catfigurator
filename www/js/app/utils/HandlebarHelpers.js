@@ -25,7 +25,7 @@ define(['handlebars', 'lodash' ], function(Handlebars, _) {
 
   Handlebars.registerHelper('getColor', function(name, colors) {
 
-    app.log('getColor', name, colors);
+    app.log('getColor', name, colors, _.find(colors, {name: name}).description);
     return _.find(colors, {name: name}).description;
 
   });

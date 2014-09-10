@@ -6,9 +6,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+
     handlebars: {
       compile: {
-        options: { 
+        options: {
           namespace: 'app.templates',
           processName: function(filePath) {
             return filePath.replace(/^www\/templates\//, '').replace(/\.hbs$/, '');
@@ -50,15 +51,15 @@ module.exports = function(grunt) {
 
     cssmin: {
         build: {
-            src: 'www/css/styles.css',
-            dest: 'www/css/styles.min.css'
+            src: 'www/css/styles-<%= pkg.version %>.css',
+            dest: 'www/css/styles-<%= pkg.version %>.min.css'
         }
     },
 
     sass: {
         build: {
             files: {
-                'www/css/styles.css': 'www/sass/styles.scss'
+                'www/css/styles-<%= pkg.version %>.css': 'www/sass/styles.scss'
             }
         }
     },
@@ -78,17 +79,24 @@ module.exports = function(grunt) {
           livereload: true,
         }
       }
+    },
+
+    copy: {
+      main: {
+        src: 'www/index.template.html',
+        dest: 'www/index.dev.html',
+        options: {
+            process: function(content, path) {
+                return grunt.template.process(content);
+            }
+        }
+      }
     }
 
   });
-  
 
-  //grunt.loadNpmTasks('grunt-contrib-requirejs');
-  //grunt.loadNpmTasks('grunt-contrib-handlebars');
-
-
-  grunt.registerTask('default', ['build']);
-  grunt.registerTask('dev', ['handlebars', 'sass', 'express', 'open', 'watch']);
+  grunt.registerTask('default', ['dev']);
+  grunt.registerTask('dev', ['handlebars', 'sass', 'copy', 'express', 'open', 'watch']);
   grunt.registerTask('build', ['handlebars', 'sass', 'cssmin', 'requirejs']);
 
 };

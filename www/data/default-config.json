@@ -1,7 +1,7 @@
 [
-  { "part" : "outside-panel", "color" : "blue" },
-  { "part" : "bottom-panel", "color" : "purple" },
-  { "part" : "end-cones", "color" : "blue" },
-  { "part" : "d-rings", "color" : "purple" },
-  { "part" : "seams", "color" : "red" }
+	{ "part" : "outside-panel", "color" : "blue" },
+	{ "part" : "bottom-panel", "color" : "purple" },
+	{ "part" : "end-cones", "color" : "black" },
+	{ "part" : "d-rings", "color" : "purple" },
+	{ "part" : "seams", "color" : "red" }
 ]

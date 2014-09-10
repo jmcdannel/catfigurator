@@ -14,7 +14,7 @@ function program1(depth0,data) {
   else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
     + "\" src=\"images/boats/"
-    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.selected)),stack1 == null || stack1 === false ? stack1 : stack1.color)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.selected)),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "/";
   if (helper = helpers.image) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.image); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
@@ -24,9 +24,9 @@ function program1(depth0,data) {
   }
 
   buffer += "<!-- layer PNGs -->\n<figure>\n";
-  stack1 = helpers.each.call(depth0, (depth0 && depth0.parts), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.layers), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n<img id=\"preview-overlay\" src=\"images/boats/overlay.png\" alt=\"\">\n</figure>";
+  buffer += "\n<img id=\"preview-overlay\" src=\"images/boats/overlay.png\" alt=\"\">\n</figure>\n";
   return buffer;
   });
 
@@ -47,22 +47,28 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper, options;
-  buffer += "\n    <fieldset>\n      <h3>";
+  buffer += "\n    <fieldset class=\"part-";
+  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\n      <h3>";
   if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + ": <em>"
-    + escapeExpression((helper = helpers.getColor || (depth0 && depth0.getColor),options={hash:{},data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.selected)),stack1 == null || stack1 === false ? stack1 : stack1.color), (depth0 && depth0.colorList), options) : helperMissing.call(depth0, "getColor", ((stack1 = (depth0 && depth0.selected)),stack1 == null || stack1 === false ? stack1 : stack1.color), (depth0 && depth0.colorList), options)))
-    + "</em></h3>\n      ";
+    + "</h3>\n      <span class=\"selected-color\" style=\"background-color: #"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.selected)),stack1 == null || stack1 === false ? stack1 : stack1.rgb)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n        "
+    + escapeExpression((helper = helpers.getColor || (depth0 && depth0.getColor),options={hash:{},data:data},helper ? helper.call(depth0, ((stack1 = (depth0 && depth0.selected)),stack1 == null || stack1 === false ? stack1 : stack1.name), (depth0 && depth0.colorList), options) : helperMissing.call(depth0, "getColor", ((stack1 = (depth0 && depth0.selected)),stack1 == null || stack1 === false ? stack1 : stack1.name), (depth0 && depth0.colorList), options)))
+    + "\n      </span>\n\n      <div class=\"color-options\">\n        ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.colorList), {hash:{},inverse:self.noop,fn:self.programWithDepth(2, program2, data, depth0),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    </fieldset>\n  ";
+  buffer += "\n      </div>\n    </fieldset>\n  ";
   return buffer;
   }
 function program2(depth0,data,depth1) {
   
   var buffer = "", stack1, helper, options;
-  buffer += "\n      <input type=\"radio\" name=\""
+  buffer += "\n        <input type=\"radio\" name=\""
     + escapeExpression(((stack1 = (depth1 && depth1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" id=\""
     + escapeExpression(((stack1 = (depth1 && depth1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
@@ -74,10 +80,10 @@ function program2(depth0,data,depth1) {
   if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\" \n          ";
-  stack1 = (helper = helpers.compare || (depth0 && depth0.compare),options={hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.name), "eq", ((stack1 = (depth1 && depth1.selected)),stack1 == null || stack1 === false ? stack1 : stack1.color), options) : helperMissing.call(depth0, "compare", (depth0 && depth0.name), "eq", ((stack1 = (depth1 && depth1.selected)),stack1 == null || stack1 === false ? stack1 : stack1.color), options));
+    + "\"\n            ";
+  stack1 = (helper = helpers.compare || (depth0 && depth0.compare),options={hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data},helper ? helper.call(depth0, (depth0 && depth0.name), "eq", ((stack1 = (depth1 && depth1.selected)),stack1 == null || stack1 === false ? stack1 : stack1.name), options) : helperMissing.call(depth0, "compare", (depth0 && depth0.name), "eq", ((stack1 = (depth1 && depth1.selected)),stack1 == null || stack1 === false ? stack1 : stack1.name), options));
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += ">\n      <label style=\"background-color: #";
+  buffer += ">\n        <label style=\"background-color: #";
   if (helper = helpers.rgb) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.rgb); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -87,11 +93,11 @@ function program2(depth0,data,depth1) {
   if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\">\n        <span>";
+    + "\">\n          <span>";
   if (helper = helpers.description) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.description); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</span>\n      </label>\n      ";
+    + "</span>\n        </label>\n        ";
   return buffer;
   }
 function program3(depth0,data) {
@@ -103,7 +109,7 @@ function program3(depth0,data) {
   buffer += "<form>\n  ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.parts), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</form>";
+  buffer += "\n</form>\n";
   return buffer;
   });
 
@@ -113,7 +119,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<hgroup class=\"container\">\n  <h1>Cat-figurator <small>BETA</small></h1>\n  <h2>12.5' Sotar Legend</h2>\n</hgroup>";
+  return "<hgroup class=\"container\">\n  <h1><em>Cat</em>figurator <small>BETA</small></h1>\n  <h2>12.5' Sotar Legend</h2>\n</hgroup>\n";
   });
 
 this["app"]["templates"]["UserActions"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
