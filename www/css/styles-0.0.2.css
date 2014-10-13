@@ -213,7 +213,7 @@ body {
   color: #333333; }
 
 a {
-  color: #96c34b;
+  color: #96C34B;
   text-decoration: none;
   transition: color 0.1s ease-in;
   -webkit-transition: color 0.1s ease-in 0; }
@@ -228,10 +228,10 @@ button.primary {
   padding: 7px 30px;
   font-size: 13px;
   font-weight: bold;
-  color: #e6f7f9;
+  color: #E6F7F9;
   white-space: nowrap;
   background-color: transparent;
-  border: 1px solid #e6f7f9;
+  border: 1px solid #E6F7F9;
   vertical-align: middle;
   cursor: pointer;
   border-radius: 3px;
@@ -247,7 +247,7 @@ button.primary {
 
 button.primary:hover {
   background: #333333;
-  color: #e6f7f9; }
+  color: #E6F7F9; }
 
 button:focus {
   outline: none; }
@@ -303,17 +303,17 @@ header hgroup {
   padding: 10px; }
 header h1 {
   float: left;
-  color: #e6f7f9;
+  color: #E6F7F9;
   text-transform: uppercase; }
   header h1 em {
-    color: #f24c27;
+    color: #F24C27;
     font-style: normal; }
   header h1 small {
     font-size: 10px;
-    color: #e6f7f9;
+    color: #E6F7F9;
     font-weight: normal; }
 header h2 {
-  color: #e6f7f9;
+  color: #E6F7F9;
   float: right; }
 
 #preview {
@@ -357,12 +357,12 @@ header h2 {
     margin: 0;
     padding: 0 0 0 10px;
     line-height: 40px;
-    color: #e6f7f9;
+    color: #E6F7F9;
     float: left;
     width: 60%;
     background: rgba(255, 255, 255, 0.2); }
   #color-controls .selected-color {
-    color: #e6f7f9;
+    color: #E6F7F9;
     float: right;
     line-height: 40px;
     text-align: center;
@@ -404,9 +404,9 @@ header h2 {
     width: 21%;
     height: 32px; }
     #color-controls label:hover {
-      -webkit-box-shadow: #cccccc 0 0 5px;
-      -moz-box-shadow: #cccccc 0 0 5px;
-      box-shadow: #cccccc 0 0 5px;
+      -webkit-box-shadow: #CCC 0 0 5px;
+      -moz-box-shadow: #CCC 0 0 5px;
+      box-shadow: #CCC 0 0 5px;
       z-index: 2; }
     #color-controls label span {
       display: none; }
@@ -442,9 +442,9 @@ header h2 {
   .action-window.loading p {
     visibility: hidden; }
   .action-window a {
-    color: #e6f7f9; }
+    color: #E6F7F9; }
     .action-window a:hover {
-      color: #e6f7f9; }
+      color: #E6F7F9; }
 
 .input-save-link {
   border: 0;
@@ -465,4 +465,6 @@ header h2 {
 .action-buttons .open {
   border-radius: 0 0 3px 3px;
   background: #dedede;
-  color: #e6f7f9; }
+  color: #E6F7F9; }
+
+/*# sourceMappingURL=styles-0.0.2.css.map */
