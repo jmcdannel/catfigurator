@@ -15,12 +15,10 @@
   transition: max-height 1s ease;
 
   &.open {
-    border: 1px solid $primaryHover;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: -1px;
-    background: $primaryHover;
-    height: auto;  
+    height: auto;
     max-height: 200px;
   }
 
@@ -28,10 +26,10 @@
     visibility: hidden;
   }
 
-  a { 
+  a {
     color: $white;
-    &:hover { 
-      color: $white; 
+    &:hover {
+      color: $white;
     }
   }
 }
@@ -55,6 +53,7 @@
 
 
 .action-buttons .open {
-  border-top: 1px solid $primaryHover;
-  background: $primaryHover;
+  border-radius: 0 0 3px 3px;
+  background: #dedede;
+  color: $white;
 }

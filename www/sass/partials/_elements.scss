@@ -2,7 +2,7 @@ body {
   background: #FFF;
   color: $black;
 }
-a { 
+a {
   color: $secondary;
   text-decoration: none;
   transition: color 0.1s ease-in;
@@ -18,12 +18,13 @@ button.primary {
   padding: 7px 30px;
   font-size: 13px;
   font-weight: bold;
-  color: $black;
+  color: $white;
   white-space: nowrap;
   background-color: transparent;
-  border: 1px solid $primary;
+  border: 1px solid $white;
   vertical-align: middle;
   cursor: pointer;
+  border-radius: 3px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -35,8 +36,9 @@ button.primary {
   -webkit-transition: all 0.2s ease-in 0;
 }
 button.primary:hover {
-  background: $primaryHover;
+  background: $black;
+  color: $white;
 }
-button:focus { 
-    outline: none; 
+button:focus {
+    outline: none;
 }

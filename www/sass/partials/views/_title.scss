@@ -1,19 +1,25 @@
 header {
-  background: #F2F2F2;
-  border-bottom: 1px solid #DDD;
 
   hgroup {
     overflow: auto;
     padding: 10px;
-
   }
-  h1 { 
-    float: left; 
+  h1 {
+    float: left;
+    color: $white;
+    text-transform: uppercase;
+    em {
+      color: $red;
+      font-style: normal;
+    }
     small {
       font-size: 10px;
-      color: #999;
+      color: $white;
       font-weight: normal;
     }
   }
-  h2 { float: right; }
+  h2 {
+    color: $white;
+    float: right;
+  }
 }

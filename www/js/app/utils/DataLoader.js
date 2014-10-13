@@ -5,7 +5,7 @@ define(['lodash', 'utils/ColorUtils'], function(_, ColorUtils) {
   var defaultConfig = 'data/default-config.json';
 
   function fetch(colors, success) {
-
+    app.log('DataLoader.fetch', colors);
     if (colors) {
       $.when( 
         $.get(colorUrl), 
@@ -29,15 +29,23 @@ define(['lodash', 'utils/ColorUtils'], function(_, ColorUtils) {
   }
 
   function parse(colorResponse, partResponse, configResponse, success) {
-    var parts = partResponse[0];
-    _.each(parts, function(part) {
+    var colors = colorResponse[0];
+    var parts = partResponse[0].parts;
+    var config = configResponse[0];
+    app.log('DataLoader.parse', colorResponse);
+   _.each(parts, function(part) {
       part.colorList = colorResponse[0][part.colors];
-      part.selected = _.find(configResponse[0], {part: part.id});
+      part.selected = getColor(config, part);
     });
-    app.log('parse', parts);
     if (_.isFunction(success)) {
       success(parts);
     }
+  }
+
+  function getColor(config, part) {
+    var selected = _.find(config, { part: part.id });
+    var color = _.find(part.colorList, { name: selected.color });
+    return color;
   }
 
   return { fetch: fetch }

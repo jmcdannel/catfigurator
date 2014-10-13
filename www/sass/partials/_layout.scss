@@ -1,5 +1,18 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
 html, body {
   height: 100%;
+    overflow: auto;
+}
+body {
+  background: url(../images/01.jpg) no-repeat center 0 fixed;
+  background-size: cover;
+
+
 }
 .container {
   width: 960px;

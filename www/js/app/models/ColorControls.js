@@ -10,7 +10,7 @@ define(['backbone', 'utils/ColorUtils'], function(Backbone, colorUtils) {
     },
 
     getHref: function() {
-      app.log('getHref', colorUtils);
+      app.log('getHref', colorUtils, this.get('parts'));
       return '/' + colorUtils.getUrlColors(this.get('parts'));
     }
 

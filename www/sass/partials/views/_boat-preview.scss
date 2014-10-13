@@ -4,9 +4,10 @@ $previewHeight: 204px;
 #preview {
 
   padding: 40px 0;
-  border: 1px solid $lightGrey;
+  border: 1px solid #FFF;
   margin: 20px auto;
   border-radius: 5px;
+  background: rgba(255, 255, 255, 0.15);
 
   figure {
     width: $previewWidth;
