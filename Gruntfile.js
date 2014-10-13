@@ -59,6 +59,9 @@ module.exports = function(grunt) {
 
     sass: {
         build: {
+            options: {
+              require: "sass-json-vars"
+            },
             files: {
                 'build/css/styles-<%= pkg.version %>.css': 'src/sass/styles.scss'
             }
@@ -79,6 +82,13 @@ module.exports = function(grunt) {
         options: {
           livereload: true,
         }
+      },
+      js: {
+        files: ['src/js/app/**/*.js', 'src/js/app.js'],
+        tasks: ['copy:javascript'],
+        options: {
+          livereload: true,
+        }
       }
     },
 
@@ -95,11 +105,15 @@ module.exports = function(grunt) {
       resources: {
         files: [
           { expand: true, cwd: 'src/', src: 'data/**',   dest: 'build/' },
-          { expand: true, cwd: 'src/', src: 'js/app.js',   dest: 'build/' },
-          { expand: true, cwd: 'src/', src: 'js/app/**',   dest: 'build/' },
           { expand: true, cwd: 'src/', src: 'js/lib/**',   dest: 'build/' },
           { expand: true, cwd: 'src/', src: 'images/**',   dest: 'build/' },
           { expand: true, cwd: 'src/', src: '.htaccess',   dest: 'build/' }
+        ]
+      },
+      javascript: {
+        files: [
+          { expand: true, cwd: 'src/', src: 'js/app.js',   dest: 'build/' },
+          { expand: true, cwd: 'src/', src: 'js/app/**',   dest: 'build/' }
         ]
       }
     },
@@ -127,6 +141,7 @@ module.exports = function(grunt) {
     'sass',
     'copy:index',
     'copy:resources',
+    'copy:javascript',
     'express',
     'open',
     'watch'
