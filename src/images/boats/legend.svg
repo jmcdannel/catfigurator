@@ -32,9 +32,6 @@
       <path d="M19,29.9c5.8,3.4 11.4,6.5 16.8,9.4c40.5,21.5 74.2,31.8 112.2,39c57.6,10.9 124.7,12.4 241.5,12.4c0.4,0 0.7,0 1.1,0"
         style="fill:none;stroke-width:1px;stroke:#666;"
         data-part-name="seam-left-top-curve" data-part="seams"/>
-      <path d="M12.9,56.9c3.1,-0.6 5.7,-1.6 8.1,-2.9c6.5,-3.6 10.9,-9.5 14.8,-14.6c0,0 0,-0.1 0.1,-0.1"
-        style="fill:none;stroke-width:1px;stroke:#666;"
-        data-part-name="seam-left-cone-base" data-part="seams"/>
       <path d="M20.8,53.3c0.1,0.2 0.2,0.4 0.3,0.6c15.2,32.8 42.9,69.4 85.3,103.1c26.8,21.4 73.2,43.2 116.7,49c16.6,2.2 38.3,3.2 61.2,3.6c33.7,0.6 71.2,-0.1 108.8,-0.1c0.3,0 0.5,0 0.8,0"
         style="fill:none;stroke-width:1px;stroke:#666;"
         data-part-name="seam-left-panel-curve" data-part="seams"/>
@@ -47,9 +44,6 @@
       <path d="M1004,30.1c-0.1,0 -0.1,0 0,0c-6,3.5 -11.8,6.7 -17.5,9.7c-40.1,21.3 -73.7,31.5 -111.5,38.7c-57.6,11 -125.2,12.5 -242.6,12.5"
         style="fill:none;stroke-width:1px;stroke:#666;"
         data-part-name="seam-right-top-curve" data-part="seams"/>
-      <path d="M1010.1,56.9c-2.9,-0.5 -5.5,-1.4 -7.8,-2.6c-7,-3.5 -11.7,-9.6 -15.7,-14.4"
-        style="fill:none;stroke-width:1px;stroke:#666;"
-        data-part-name="seam-right-cone-base" data-part="seams"/>
       <path d="M1002.2,54.3c-15.1,32.9 -43,69.8 -85.6,103.7c-26.8,21.4 -73.2,43.2 -116.7,49c-16.6,2.2 -38.3,3.2 -61.2,3.6c-33.5,0.6 -70.9,-0.1 -108.3,-0.1"
         style="fill:none;stroke-width:1px;stroke:#666;"
         data-part-name="seam-right-panel-curve" data-part="seams"/>
