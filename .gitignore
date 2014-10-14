@@ -1,4 +1,5 @@
 .sass-cache
 node_modules
+build
 www/js/app.min.js
 www/css/styles.min.js

@@ -1,0 +1,41 @@
+{
+  "colors" : [
+    { "name" : "red", "description" : "Red", "rgb" : "#FF0000" },
+    { "name" : "blue", "description" : "Dark Blue", "rgb" : "#0000FF" },
+    { "name" : "purple", "description" : "Purple", "rgb" : "#993366" },
+    { "name" : "light-blue", "description" : "Light Blue", "rgb" : "#42B7F5" },
+    { "name" : "grey", "description" : "Grey", "rgb" : "#888888" },
+    { "name" : "teal", "description" : "Teal", "rgb" : "#009999" },
+    { "name" : "orange", "description" : "Orange", "rgb" : "#FFFF00" },
+    { "name" : "black", "description" : "Black", "rgb" : "#000000" },
+    { "name" : "white", "description" : "White", "rgb" : "#FFFFFF" },
+    { "name" : "green", "description" : "Green", "rgb" : "#009933" },
+    { "name" : "yellow", "description" : "Yellow", "rgb" : "#FFFF00" },
+    { "name" : "dark-green", "description" : "Dark Green", "rgb" : "#195E31" }
+  ],
+  "panels": [
+    "red",
+    "blue",
+    "purple",
+    "light-blue",
+    "grey",
+    "teal",
+    "orange",
+    "black",
+    "white",
+    "green",
+    "yellow",
+    "dark-green"
+  ],
+  "seams": [
+    "red",
+    "purple",
+    "grey",
+    "orange",
+    "black",
+    "white",
+    "green",
+    "yellow",
+    "dark-green"
+  ]
+}

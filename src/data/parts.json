@@ -1,0 +1,34 @@
+{
+  "parts": [
+    {
+      "name" : "Outside Panel",
+      "id" : "outside-panel",
+      "colors" : "panels",
+      "svg" : "fill"
+    },
+    {
+      "name" : "Bottom Panel",
+      "id" : "bottom-panel",
+      "colors" : "panels",
+      "svg" : "fill"
+    },
+    {
+      "name" : "Seam Tape",
+      "id" : "seams",
+      "colors" : "seams",
+      "svg" : "stroke"
+    },
+    {
+      "name" : "End Cones",
+      "id" : "end-cones",
+      "colors" : "seams",
+      "svg" : "fill"
+    },
+    {
+      "name" : "D-Rings",
+      "id" : "d-rings",
+      "colors" : "panels",
+      "svg" : "fill"
+    }
+  ]
+}

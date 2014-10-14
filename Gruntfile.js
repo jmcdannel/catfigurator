@@ -6,17 +6,18 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    clean: ['build'],
 
     handlebars: {
       compile: {
         options: {
           namespace: 'app.templates',
           processName: function(filePath) {
-            return filePath.replace(/^www\/templates\//, '').replace(/\.hbs$/, '');
+            return filePath.replace(/^src\/templates\//, '').replace(/\.hbs$/, '');
           }
         },
         files: {
-          'www/js/app/compiled-templates.js': ['www/templates/*.hbs']
+          'build/js/templates/compiled-templates.js': ['src/templates/*.hbs']
         }
       }
     },
@@ -24,7 +25,7 @@ module.exports = function(grunt) {
     express: {
         all: {
             options: {
-                bases: ['./www/'],
+                bases: ['./build/'],
                 port: 8080,
                 hostname: '0.0.0.0',
                 livereload: true
@@ -34,16 +35,16 @@ module.exports = function(grunt) {
 
     open: {
       all: {
-        path: 'http://localhost:8080/index.dev.html'
+        path: 'http://localhost:8080/index.html'
       }
     },
 
     requirejs: {
       compile: {
         options: {
-          baseUrl: "www/js/app",
-          mainConfigFile: "www/js/app.js",
-          out: "www/js/app.min.js",
+          baseUrl: "src/js/app",
+          mainConfigFile: "src/js/app.js",
+          out: "build/js/app.min.js",
           name : "../app"
         }
       }
@@ -51,30 +52,40 @@ module.exports = function(grunt) {
 
     cssmin: {
         build: {
-            src: 'www/css/styles-<%= pkg.version %>.css',
-            dest: 'www/css/styles-<%= pkg.version %>.min.css'
+            src: 'src/css/styles-<%= pkg.version %>.css',
+            dest: 'build/css/styles-<%= pkg.version %>.min.css'
         }
     },
 
     sass: {
         build: {
+            options: {
+              require: "sass-json-vars"
+            },
             files: {
-                'www/css/styles-<%= pkg.version %>.css': 'www/sass/styles.scss'
+                'build/css/styles-<%= pkg.version %>.css': 'src/sass/styles.scss'
             }
         }
     },
 
     watch: {
       css: {
-          files: ['www/sass/**/*.scss'],
+          files: ['src/sass/**/*.scss'],
           tasks: ['sass'],
           options: {
             livereload: true,
           }
       },
       html: {
-        files: ['www/templates/*.hbs'],
+        files: ['src/templates/*.hbs'],
         tasks: ['handlebars'],
+        options: {
+          livereload: true,
+        }
+      },
+      js: {
+        files: ['src/js/app/**/*.js', 'src/js/app.js'],
+        tasks: ['copy:javascript'],
         options: {
           livereload: true,
         }
@@ -82,21 +93,59 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      main: {
-        src: 'www/index.template.html',
-        dest: 'www/index.dev.html',
+      index: {
+        src: 'src/index.template.html',
+        dest: 'build/index.html',
         options: {
-            process: function(content, path) {
-                return grunt.template.process(content);
-            }
+          process: function(content, path) {
+            return grunt.template.process(content);
+          }
+        }
+      },
+      resources: {
+        files: [
+          { expand: true, cwd: 'src/', src: 'data/**',   dest: 'build/' },
+          { expand: true, cwd: 'src/', src: 'js/lib/**',   dest: 'build/' },
+          { expand: true, cwd: 'src/', src: 'images/**',   dest: 'build/' },
+          { expand: true, cwd: 'src/', src: '.htaccess',   dest: 'build/' }
+        ]
+      },
+      javascript: {
+        files: [
+          { expand: true, cwd: 'src/', src: 'js/app.js',   dest: 'build/' },
+          { expand: true, cwd: 'src/', src: 'js/app/**',   dest: 'build/' }
+        ]
+      }
+    },
+
+    /*
+    includes: {
+      files: {
+        src: ["src/*.html"],
+        dest: "build",
+        flatten: true,
+        cwd: '.',
+        options: {
+          silent: true
         }
       }
     }
+    */
 
   });
 
   grunt.registerTask('default', ['dev']);
-  grunt.registerTask('dev', ['handlebars', 'sass', 'copy', 'express', 'open', 'watch']);
-  grunt.registerTask('build', ['handlebars', 'sass', 'cssmin', 'requirejs']);
+  grunt.registerTask('dev', [
+    'clean',
+    'handlebars',
+    'sass',
+    'copy:index',
+    'copy:resources',
+    'copy:javascript',
+    'express',
+    'open',
+    'watch'
+  ]);
+  grunt.registerTask('build', ['clean', 'handlebars', 'sass', 'cssmin', 'requirejs']);
 
 };

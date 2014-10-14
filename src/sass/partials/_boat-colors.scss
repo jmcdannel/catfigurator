@@ -1,0 +1,20 @@
+@import "../data/colors.json";
+@import "../data/parts.json";
+
+#preview {
+
+  @each $part in $parts {
+
+    @each $boatcolor in $colors {
+
+      path[data-part=#{map-get($part, id)}][data-color=#{map-get($boatcolor, name)}] {
+        @if map-get($part, svg) == "fill" {
+          fill: #{map-get($boatcolor, rgb)} !important;
+        } @else if map-get($part, svg) == "stroke" {
+          stroke: #{map-get($boatcolor, rgb)} !important;
+        }
+      }
+
+    }
+  }
+}
