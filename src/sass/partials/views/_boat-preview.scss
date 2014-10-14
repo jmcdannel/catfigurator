@@ -4,21 +4,31 @@ $previewHeight: 204px;
 #preview {
 
   padding: 40px 0;
-  border: 1px solid #FFF;
   margin: 20px auto;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.15);
+  position: relative;
+
+  img {
+    position: absolute;
+    opacity: .7;
+    transform: scale(0.94);
+    top: 33px;
+    left: -33px;
+    z-index: 2;
+  }
 
   figure {
     width: $previewWidth;
     height: $previewHeight;
     position: relative;
     margin: 0 auto;
-    > img {
+    z-index: 1;
+
+
+    /*> img {
       position: absolute;
       top: 0;
       left: 0;
-    }
+    }*/
   }
 
 

@@ -4,109 +4,113 @@
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xml:space="preserve"
-  style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.41421;">
-  <g>
+  style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.41421;"
+  class=""
+  >
+  <g transform="scale(0.94)">
+
     <g transform="matrix(1,0,0,1,0,-9.9)">
       <!-- cones -->
       <path d="M1014,35.7c-1,7.1 -2.3,14.2 -4,21.2c-2.9,-0.5 -5.5,-1.4 -7.8,-2.6c-7,-3.5 -11.7,-9.6 -15.7,-14.4c5.7,-3 11.5,-6.2 17.4,-9.7l0,0.1c5.1,-2.3 11.4,2.3 10.1,5.4Z"
-        style="fill:#CCC;fill-rule:nonzero;"
+        class="area"
         data-part-name="cone-right" data-part="end-cones"/>
       <path d="M21.1,54c-2.4,1.3 -5.1,2.4 -8.1,2.9c-1.7,-7.2 -3,-14.4 -4,-21.6c-1.3,-3.1 5,-7.7 10,-5.5l0,0.1c5.8,3.4 11.4,6.5 16.8,9.4c-3.9,5.2 -8.2,11 -14.7,14.7Z"
-        style="fill:#CCC;fill-rule:nonzero;"
+        class="area"
         data-part-name="cone-left" data-part="end-cones"/>
       <!-- bottom panel -->
       <path d="M743.7,239.4l-464.7,0l0,0.2c-68.7,0 -131.6,-14.4 -176.7,-47.5c-47,-34.5 -77.2,-83.7 -89.4,-135.1c3.1,-0.6 5.7,-1.6 8.1,-2.9c15.3,32.6 43,69.2 85.4,102.9c26.8,21.4 73.2,43.2 116.7,49c16.6,2.2 38.3,3.2 61.2,3.6c33.7,0.6 71.2,-0.1 108.8,-0.1l0,0.8l236.2,0.2l1.3,0c37.5,0 74.8,0.7 108.3,0.1c22.9,-0.4 44.6,-1.4 61.2,-3.6c43.4,-5.8 89.8,-27.6 116.7,-49c42.6,-33.9 70.4,-70.8 85.6,-103.7l0,-0.1c2.3,1.2 4.9,2.1 7.8,2.6c-12.2,51.4 -42.3,100.6 -89.3,135.1c-45.2,33.2 -108.2,47.5 -177,47.5Z"
-        style="fill:#CCC;fill-rule:nonzero;"
+        class="area"
         data-part-name="bottom-panel" data-part="bottom-panel"/>
       <!-- side panel -->
       <path d="M632.4,91c117.4,0 185,-1.5 242.5,-12.5c37.8,-7.2 71.4,-17.4 111.5,-38.7c4,4.9 8.8,10.9 15.7,14.4l0,0.1c-15.1,32.9 -43,69.8 -85.6,103.7c-26.8,21.4 -73.2,43.2 -116.7,49c-16.6,2.2 -38.3,3.2 -61.2,3.6c-33.5,0.6 -70.9,-0.1 -108.3,-0.1l-1.3,0l-236,-0.1l0,-0.8c-37.6,0 -75.1,0.7 -108.8,0.1c-22.9,-0.4 -44.6,-1.4 -61.2,-3.6c-43.5,-5.8 -89.8,-27.6 -116.7,-49c-42.3,-33.8 -70,-70.4 -85.2,-103.1c6.5,-3.6 10.9,-9.5 14.8,-14.6c40.4,21.4 74.1,31.7 112.1,38.9c57.6,10.9 124.7,12.4 241.5,12.4Z"
-        style="fill:#CCC;fill-rule:nonzero;"
+        class="area"
         data-part-name="outside-panel" data-part="outside-panel"/>
       <!-- seams -->
       <path d="M8.9,35.3c1,7.2 2.3,14.4 4,21.6c12.2,51.4 42.3,100.6 89.4,135.1c45.1,33.1 108,47.5 176.7,47.5c0.1,0 0.2,0 0.3,0"
-        style="fill:none;stroke-width:1px;stroke:#666;"
+        class="line"
         data-part-name="seam-left-bottom-curve" data-part="seams"/>
       <path d="M19,29.8c-5,-2.2 -11.3,2.4 -10.1,5.5"
-        style="fill:none;stroke-width:1px;stroke:#666;"
+        class="line"
         data-part-name="seam-left-cone-tip" data-part="seams"/>
       <path d="M19,29.9c5.8,3.4 11.4,6.5 16.8,9.4c40.5,21.5 74.2,31.8 112.2,39c57.6,10.9 124.7,12.4 241.5,12.4c0.4,0 0.7,0 1.1,0"
-        style="fill:none;stroke-width:1px;stroke:#666;"
+        class="line"
         data-part-name="seam-left-top-curve" data-part="seams"/>
       <path d="M20.8,53.3c0.1,0.2 0.2,0.4 0.3,0.6c15.2,32.8 42.9,69.4 85.3,103.1c26.8,21.4 73.2,43.2 116.7,49c16.6,2.2 38.3,3.2 61.2,3.6c33.7,0.6 71.2,-0.1 108.8,-0.1c0.3,0 0.5,0 0.8,0"
-        style="fill:none;stroke-width:1px;stroke:#666;"
+        class="line"
         data-part-name="seam-left-panel-curve" data-part="seams"/>
       <path d="M1014.1,35.3c0,0.1 0,0.3 -0.1,0.4c-1,7.1 -2.3,14.2 -4,21.2c-12.2,51.4 -42.3,100.6 -89.3,135.1c-45.2,33.2 -108.2,47.5 -177,47.5"
-        style="fill:none;stroke-width:1px;stroke:#666;"
+        class="line"
         data-part-name="seam-right-bottom-curve" data-part="seams"/>
       <path d="M1004,30.2c5.1,-2.2 11.4,2.4 10.1,5.5"
-        style="fill:none;stroke-width:1px;stroke:#666;"
+        class="line"
         data-part-name="seam-right-cone-tip" data-part="seams"/>
       <path d="M1004,30.1c-0.1,0 -0.1,0 0,0c-6,3.5 -11.8,6.7 -17.5,9.7c-40.1,21.3 -73.7,31.5 -111.5,38.7c-57.6,11 -125.2,12.5 -242.6,12.5"
-        style="fill:none;stroke-width:1px;stroke:#666;"
+        class="line"
         data-part-name="seam-right-top-curve" data-part="seams"/>
       <path d="M1002.2,54.3c-15.1,32.9 -43,69.8 -85.6,103.7c-26.8,21.4 -73.2,43.2 -116.7,49c-16.6,2.2 -38.3,3.2 -61.2,3.6c-33.5,0.6 -70.9,-0.1 -108.3,-0.1"
-        style="fill:none;stroke-width:1px;stroke:#666;"
+        class="line"
         data-part-name="seam-right-panel-curve" data-part="seams"/>
       <path d="M389.5,90.7l242.9,0.3l0.1,0"
-        style="fill:none;stroke-width:1px;stroke:#666;"
+        class="line"
         data-part-name="seam-top" data-part="seams"/>
       <path d="M393,210.4l236.2,0.1l1.3,0"
-        style="fill:none;stroke-width:1px;stroke:#666;"
+        class="line"
         data-part-name="seam-panel" data-part="seams"/>
       <path d="M279.5,239.7l464.9,0.3l0.1,0"
-        style="fill:none;stroke-width:1px;stroke:#666;"
+        class="line"
         data-part-name="seam-bottom" data-part="seams"/>
     </g>
     <!-- patches -->
     <g transform="matrix(1,0,0,1,0,-9.9)">
       <path d="M292,118.9l2.2,2.3l-3.1,50.7l-1.9,2.6l-5.1,0.6l-57.5,-32.9l-0.5,-2.6l0.5,-2.2l39.3,-30.1l0.1,0.1l4,0Z"
-        style="fill:#999;fill-rule:nonzero;"
+        class="area"
         data-part-name="patch-1" data-part="d-rings"/>
     </g>
     <g transform="matrix(1,0,0,1,0,-9.9)">
       <path d="M473.6,160l0.4,8.6l-0.1,7.4l-3,3.8l0,0.2l-76,0l-3,-4l0,-16c0.2,-0.4 0.4,-0.7 0.5,-1.1c1.5,-3 3,-6.1 4.4,-9.2c2,-4.1 4,-8.2 6,-12.3c2.1,-4.3 4.2,-8.7 6.2,-13c1.7,-3.5 3.4,-7.1 5.1,-10.6c0.8,-1.6 1.6,-3.3 2.4,-4.9l0.4,0.1l32,0Z"
-        style="fill:#999;fill-rule:nonzero;"
+        class="area"
         data-part-name="patch-2" data-part="d-rings"/>
     </g>
     <g transform="matrix(1,0,0,1,0,-9.9)">
       <path d="M632,160l0.4,8.6l-0.1,7.4l-3,3.8l0,0.2l-76,0l-3,-4l0,-16c0.2,-0.4 0.3,-0.7 0.5,-1.1c1.5,-3 3,-6.1 4.4,-9.2c2,-4.1 4,-8.2 5.9,-12.3c2.1,-4.3 4.2,-8.7 6.2,-13c1.7,-3.5 3.4,-7.1 5.1,-10.6c0.8,-1.6 1.6,-3.3 2.4,-4.9l0.4,0.1l32,0Z"
-        style="fill:#999;fill-rule:nonzero;"
+        class="area"
         data-part-name="patch-3" data-part="d-rings"/>
     </g>
     <g transform="matrix(1,0,0,1,0,-9.9)">
       <path d="M730.9,117.8l-2.3,2.4l3.2,50.6l1.8,2.6l5.2,0.6l57.4,-32.8l0.6,-2.7l-0.6,-2.2l-39.2,-30.1l-0.1,0.1l-4,0Z"
-        style="fill:#999;fill-rule:nonzero;"
+        class="area"
         data-part-name="patch-4" data-part="d-rings"/>
     </g>
     <!-- handles -->
     <g transform="matrix(1,0,0,1,0,-9.9)">
       <path d="M450.4,159.2l0,6.7c-14.8,4.6 -22.2,4.4 -35,0l0,-6.7l0.1,-0.3c12.7,4.3 20.1,4.5 34.8,0Z"
-        style="fill:#666;fill-rule:nonzero;"
+        class="area area-default"
         data-part-name="handle-1"/>
     </g>
     <g transform="matrix(1,0,0,1,0,-9.9)">
       <path d="M607.8,159.9l0,6.7c-14.8,4.6 -22.2,4.4 -35,0l0,-6.7l0.1,-0.3c12.7,4.3 20.1,4.5 34.8,0Z"
-        style="fill:#666;fill-rule:nonzero;"
+        class="area area-default"
         data-part-name="handle-2"/>
     </g>
     <!-- tongues -->
     <g transform="matrix(0.8672,0.498,-0.498,0.8672,102.962,-126.205)">
       <rect x="264" y="131.9" width="11" height="6"
-        style="fill:#333;"
+        class="area area-default"
         data-part-name="tongue-1"/>
     </g>
     <g transform="matrix(1,0,0,1,0,-9.9)">
-      <rect x="427" y="132.9" width="11" height="6" style="fill:#333;"
-      data-part-name="tongue-2"/>
+      <rect x="427" y="132.9" width="11" height="6"
+        class="area area-default"
+        data-part-name="tongue-2"/>
     </g>
     <g transform="matrix(1,0,0,1,0,-9.9)">
       <rect x="585" y="132.9" width="11" height="6"
-        style="fill:#333;"
+        class="area area-default"
         data-part-name="tongue-3"/>
     </g>
     <g transform="matrix(-0.8672,0.498,-0.498,-0.8672,1474.56,-131.504)">
       <rect x="748" y="132.9" width="11" height="6"
-        style="fill:#333;"
+        class="area area-default"
         data-part-name="tongue-4"/>
     </g>
   </g>

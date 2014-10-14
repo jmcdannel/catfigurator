@@ -3,16 +3,36 @@
 
 #preview {
 
+  position: relative;
+
+
+  .line {
+    fill:none;
+    stroke-width:2px;
+  }
+
+  .line-thick {
+    stroke-width: 3px;
+  }
+
+  .area {
+    fill-rule:nonzero;
+  }
+
+
+  .area-default {
+    fill: #222;
+  }
+
   @each $part in $parts {
 
     @each $boatcolor in $colors {
 
       path[data-part="#{map-get($part, id)}"][data-color="#{map-get($boatcolor, name)}"] {
         @if map-get($part, svg) == "fill" {
-          fill: #{map-get($boatcolor, rgb)} !important;
+          fill: #{map-get($boatcolor, rgb)};
         } @else if map-get($part, svg) == "stroke" {
-          stroke: #{map-get($boatcolor, rgb)} !important;
-          stroke-width: 2px !important;
+          stroke: #{map-get($boatcolor, rgb)};
         }
       }
 
