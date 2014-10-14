@@ -6,9 +6,9 @@ requirejs.config({
       lodash: '../lib/lodash',
       backbone: '../lib/backbone',
       handlebars: '../lib/handlebars.runtime',
-      templates : 'compiled-templates'
+      templates : '../templates/compiled-templates'
     },
-    
+
     shim: {
         // Libraries
         jquery: {

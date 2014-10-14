@@ -23,10 +23,10 @@ define(['handlebars', 'lodash' ], function(Handlebars, _) {
     return options.inverse(this);
   });
 
-  Handlebars.registerHelper('getColor', function(name, colors) {
+  Handlebars.registerHelper('getColor', function(name, colors, prop) {
 
-    app.log('getColor', name, colors, _.find(colors, {name: name}).description);
-    return _.find(colors, {name: name}).description;
+    app.log('HBH:getColor', name, colors, _.find(colors, {name: name}));
+    return _.find(colors, {name: name})[prop];
 
   });
 

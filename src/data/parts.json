@@ -4,35 +4,30 @@
       "name" : "Outside Panel",
       "id" : "outside-panel",
       "colors" : "panels",
-      "image" : "outside",
       "svg" : "fill"
     },
     {
       "name" : "Bottom Panel",
       "id" : "bottom-panel",
       "colors" : "panels",
-      "image" : "bottom",
       "svg" : "fill"
     },
     {
       "name" : "Seam Tape",
       "id" : "seams",
       "colors" : "seams",
-      "image" : "seams",
       "svg" : "stroke"
     },
     {
       "name" : "End Cones",
       "id" : "end-cones",
       "colors" : "seams",
-      "image" : "cones",
       "svg" : "fill"
     },
     {
       "name" : "D-Rings",
       "id" : "d-rings",
       "colors" : "panels",
-      "image" : "drings",
       "svg" : "fill"
     }
   ]

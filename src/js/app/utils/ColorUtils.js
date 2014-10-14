@@ -23,6 +23,18 @@ define(['app'], function() {
     return colorSettings.join(',');
   }
 
-  return { parseUrlColors : parseUrlColors, getUrlColors : getUrlColors }
+  function getFullList(colorArr, allColors) {
+    var colors = [];
+    _.each(colorArr, function(colorName) {
+      colors.push(_.find(allColors, { name: colorName }));
+    });
+    return colors;
+  }
+
+  return {
+    parseUrlColors : parseUrlColors,
+    getUrlColors : getUrlColors,
+    getFullList : getFullList
+  }
 
 });

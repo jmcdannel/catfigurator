@@ -7,7 +7,7 @@ define([
 
   function init(boatConfig) {
 
-    var model = new _model({'parts': boatConfig});
+    var model = new _model(boatConfig);
     var view = new _view({ model: model });
     view.render();
   }
